@@ -34,3 +34,6 @@ Style/HashTransformValues:
 
 Style/SymbolArray:
   Enabled: true
+
+Style/Documentation:
+  Enabled: false
