@@ -37,3 +37,7 @@ Style/SymbolArray:
 
 Style/Documentation:
   Enabled: false
+
+Style/StringLiterals:
+  Enabled: true
+  EnforcedStyle: double_quotes
