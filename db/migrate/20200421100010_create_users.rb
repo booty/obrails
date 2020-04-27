@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       CREATE TYPE user_account_status AS ENUM ('active', 'retired', 'banned')
     SQL
     create_table :users do |t|
-      t.string :type, required: true, index: true
+      t.string :type, required: true, index: true, default: "User"
       t.string :nick, required: true
       t.string :friendlyname
       t.string :password, required: true
@@ -18,7 +18,8 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.datetime :gender_updated_at, required: true, default: -> { 'CURRENT_TIMESTAMP' }
     end
     add_column :users, :gender, :user_gender, after: :password, index: true
-    add_column :users, :account_status, :user_account_status, after: :password, index: true
+    add_column :users, :account_status, :user_account_status, after: :password, index: true, default: "active"
+    add_index :users, :nick, unique: true
   end
 
   def down

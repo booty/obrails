@@ -66,7 +66,7 @@ CREATE TABLE public.schema_migrations (
 
 CREATE TABLE public.users (
     id bigint NOT NULL,
-    type character varying,
+    type character varying DEFAULT 'User'::character varying,
     nick character varying,
     friendlyname character varying,
     password character varying,
@@ -79,7 +79,7 @@ CREATE TABLE public.users (
     account_status_updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     gender_updated_at timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
     gender public.user_gender,
-    account_status public.user_account_status
+    account_status public.user_account_status DEFAULT 'active'::public.user_account_status
 );
 
 
@@ -145,6 +145,13 @@ CREATE INDEX index_users_on_deleted_at ON public.users USING btree (deleted_at);
 --
 
 CREATE INDEX index_users_on_dob_fuzzed ON public.users USING btree (dob_fuzzed);
+
+
+--
+-- Name: index_users_on_nick; Type: INDEX; Schema: public; Owner: -
+--
+
+CREATE UNIQUE INDEX index_users_on_nick ON public.users USING btree (nick);
 
 
 --
