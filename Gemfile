@@ -32,6 +32,8 @@ gem "bootsnap", ">= 1.4.2", require: false
 group :development, :test do
   gem "awesome_print"
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
+  # Having this in :development will cause Rails to generate factories instead of fixtures, which is what we want
+  gem "factory_bot_rails"
   gem "pry-byebug"
   gem "pry-rails"
 end
@@ -52,7 +54,7 @@ end
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem "capybara", ">= 2.15"
-  gem "rspec"
+  gem "rspec-rails", "~> 4.0.0"
   gem "selenium-webdriver"
   gem "webdrivers"
 end
