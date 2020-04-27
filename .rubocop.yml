@@ -7,6 +7,8 @@ require:
 AllCops:
   DisplayStyleGuide: true
   ExtraDetails: true
+  Exclude:
+    - db/migrate/*
 
 Metrics/LineLength:
   Max: 100
@@ -41,3 +43,15 @@ Style/Documentation:
 Style/StringLiterals:
   Enabled: true
   EnforcedStyle: double_quotes
+
+Style/TrailingCommaInArguments:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
