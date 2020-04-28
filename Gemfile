@@ -34,6 +34,7 @@ group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
   # Having this in :development will cause Rails to generate factories instead of fixtures, which is what we want
   gem "factory_bot_rails"
+  gem "faker", require: false
   gem "pry-byebug"
   gem "pry-rails"
 end
