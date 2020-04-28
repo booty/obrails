@@ -68,7 +68,7 @@ CREATE TABLE public.users (
     id bigint NOT NULL,
     type character varying DEFAULT 'User'::character varying,
     nick character varying,
-    friendlyname character varying,
+    friendly_name character varying,
     password character varying,
     dob date,
     dob_fuzzed date,
@@ -168,6 +168,7 @@ CREATE INDEX index_users_on_type ON public.users USING btree (type);
 SET search_path TO "$user", public;
 
 INSERT INTO "schema_migrations" (version) VALUES
-('20200421100010');
+('20200421100010'),
+('20200428125551');
 
 

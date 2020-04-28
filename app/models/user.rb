@@ -16,4 +16,25 @@ class User < ApplicationRecord
     retired: "retired",
     banned: "banned",
   }
+
+  validates :dob, presence: true
+  validates :dob_fuzzed, presence: true
+  validates :account_status, presence: true
+  validates :gender, presence: true
+
+  validates :nick,
+            presence: true,
+            length: { in: 5..25 },
+            uniqueness: true
+
+  validates :friendly_name,
+            length: { in: 2..15 }
+
+  validates :gender_comment,
+            length: { in: 2..100 },
+            allow_blank: true
+
+  def greeting
+    "I'm a regular user."
+  end
 end
