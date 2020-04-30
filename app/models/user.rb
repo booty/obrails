@@ -35,6 +35,6 @@ class User < ApplicationRecord
             allow_blank: true
 
   def greeting
-    "I'm a regular user."
+    "How do I get out of this chickenshit outfit?"
   end
 end
