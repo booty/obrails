@@ -40,4 +40,7 @@ class User < ApplicationRecord
 
 
 
+
+  def empty
+  end
 end
