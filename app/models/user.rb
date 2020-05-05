@@ -37,4 +37,6 @@ class User < ApplicationRecord
   def greeting
     "How do I get out of this chickenshit outfit? Sir. Sir?"
   end
+
+
 end
