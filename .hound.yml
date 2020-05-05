@@ -1,0 +1,8 @@
+rubocop:
+  version: 0.80.0
+  config_file: .rubocop.yml
+sass-lint:
+  enabled: true
+erblint:
+  enabled: true
+  config_file: .erb-lint.yml
