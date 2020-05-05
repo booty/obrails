@@ -37,4 +37,9 @@ class User < ApplicationRecord
   def greeting
     "I'm a regular user."
   end
+
+  def dob=(value)
+    self.dob_fuzzed = Date.parse(value) + rand(0..1000).days - 500.days
+    super(value)
+  end
 end
