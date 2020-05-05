@@ -1,4 +1,3 @@
-inherit_from: .rubocop-default.yml
 require:
   - rubocop-performance
   - rubocop-rails
@@ -9,27 +8,10 @@ AllCops:
   ExtraDetails: true
   Exclude:
     - db/migrate/*
+  TargetRubyVersion: ~
 
-Metrics/LineLength:
+Layout/LineLength:
   Max: 110
-
-Layout/SpaceAroundMethodCallOperator:
-  Enabled: true
-
-Lint/RaiseException:
-  Enabled: true
-
-Lint/StructNewOverride:
-  Enabled: true
-
-Rails/ActiveSupportAliases:
-  Enabled: false
-
-Style/AsciiComments:
-  Enabled: false
-
-Style/ExponentialNotation:
-  Enabled: true
 
 Style/HashEachMethods:
   Enabled: true
@@ -39,25 +21,3 @@ Style/HashTransformKeys:
 
 Style/HashTransformValues:
   Enabled: true
-
-Style/SymbolArray:
-  Enabled: true
-
-Style/Documentation:
-  Enabled: false
-
-Style/StringLiterals:
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-Style/TrailingCommaInArguments:
-  Enabled: true
-  EnforcedStyleForMultiline: comma
-
-Style/TrailingCommaInArrayLiteral:
-  Enabled: true
-  EnforcedStyleForMultiline: comma
-
-Style/TrailingCommaInHashLiteral:
-  Enabled: true
-  EnforcedStyleForMultiline: comma
