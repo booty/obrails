@@ -21,3 +21,6 @@ Style/HashTransformKeys:
 
 Style/HashTransformValues:
   Enabled: true
+
+FakeRule/BadRule:
+  Enabled: true
