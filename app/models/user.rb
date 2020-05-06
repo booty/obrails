@@ -34,6 +34,8 @@ class User < ApplicationRecord
             length: { in: 2..100 },
             allow_blank: true
 
+
+
   def greeting
     "How do I get out of this chickenshit outfit? Sir. Sir?"
   end
