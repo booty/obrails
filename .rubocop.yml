@@ -14,6 +14,27 @@ AllCops:
 Layout/LineLength:
   Max: 110
 
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  CountComments: true  # count full line comments?
+  Max: 25
+  ExcludedMethods: []
+  Exclude:
+    - "spec/**/*"
+    - "lib/tasks/*"
+    - "Guardfile"
+    - "Gemfile"
+    - app/models/chart/globals.rb
+    - app/models/chart/sensor_values.rb
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
 Style/HashEachMethods:
   Enabled: true
 
@@ -21,4 +42,8 @@ Style/HashTransformKeys:
   Enabled: true
 
 Style/HashTransformValues:
+  Enabled: true
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
   Enabled: true
