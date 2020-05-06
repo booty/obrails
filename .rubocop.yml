@@ -4,12 +4,18 @@ require:
   - rubocop-rspec
 
 AllCops:
+  TargetRubyVersion: ~
   DisplayCopNames: true
   DisplayStyleGuide: true
-  ExtraDetails: true
   Exclude:
+    - db/schema.rb
     - db/migrate/*
-  TargetRubyVersion: ~
+    - lib/tasks/import.rake
+    - lib/tasks/dev.rake
+    - config/*
+    - config/initializers/*
+    - config/environments/*
+  ExtraDetails: true
 
 Naming/MemoizedInstanceVariableName:
   EnforcedStyleForLeadingUnderscores: optional
